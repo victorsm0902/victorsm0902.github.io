@@ -1,7 +1,22 @@
-<!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Whatsapp Conv Generator</title>
+  <meta name="description" content="Whatsapp Conv Generator">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <h1>Whatsapp Conversation</h1>
+  <p>Fill in your number</p>
+  <p><input type="text" id="number-input"/></p>
+  <button id="generate">Generate</button>
+  <a id="link"></a>
 </body>
+<script>
+  document.getElementById("generate").onclick = () => {
+    const number = document.getElementById("number-input").value;
+    document.getElementById("link").href = `https://wa.me/+506${number}`;
+    document.getElementById("link").innerHTML = `+506${number}`;
+  };
+</script>
 </html>
