@@ -14,7 +14,7 @@
 </body>
 <script>
   document.getElementById("generate").onclick = () => {
-    const number = document.getElementById("number-input").value;
+    const number = document.getElementById("number-input").value.replaceAll(" ", "").trim().replaceAll("-", "");
     document.getElementById("link").href = `https://wa.me/+506${number}`;
     document.getElementById("link").innerHTML = `+506${number}`;
   };
